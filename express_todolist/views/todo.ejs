@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/todolist.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div id="todo-table">
+        <form >
+            <input type="text" name="item" placeholder="Add new item..." required/>
+            <button type="submit">add new item</button>
+        </form>
+        <ul>
+            <% todos.forEach(function(todo){ %>
+                <li><%= todo.item %></li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
